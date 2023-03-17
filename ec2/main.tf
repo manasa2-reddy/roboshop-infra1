@@ -18,6 +18,7 @@ resource "aws_instance" "ec2" {
       user = "centos"
       password = "DevOps321"
     }
+
     inline = [
       "git clone https://github.com/raghudevopsb71/roboshop.shell",
       "cd roboshop-shell",
@@ -46,7 +47,6 @@ resource "aws_security_group" "sg" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
-    ipv6_cidr_blocks = ["::/0"]
   }
 
   tags = {
@@ -68,6 +68,6 @@ resource "aws_route53_record" "record" {
 variable "component" {}
 variable "instance_type" {}
 variable "sg_id" {}
-variable "env"{
+variable "env" {
   default = "dev"
 }
