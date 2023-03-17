@@ -21,7 +21,7 @@ resource "aws_instance" "ec2" {
     inline = [
       "git clone https://github.com/raghudevopsb71/roboshop.shell",
       "cd roboshop-shell",
-      "sudo bach ${var.component}.sh"
+      "sudo bash ${var.component}.sh"
     ]
   }
 
