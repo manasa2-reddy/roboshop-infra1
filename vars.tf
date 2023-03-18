@@ -12,7 +12,7 @@ variable "instances" {
       name = "catalogue"
       type = "t3.micro"
     }
-    user = {
+    redis = {
       redis = "redis"
       type = "t3.micro"
     }
